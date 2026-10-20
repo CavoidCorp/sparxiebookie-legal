@@ -112,21 +112,28 @@
 
     <!-- Navigation Bar -->
     <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#0c0407]/90 border-b border-rose-950/80 h-16 flex items-center">
-        <div class="max-w-4xl mx-auto px-6 w-full h-full flex justify-between items-center">
-            <a href="#" class="flex items-center gap-3.5 h-full py-1.5 group">
-                <img src="assets/logo.png" alt="SparxieBookie Logo" class="h-full aspect-square object-contain transition-transform group-hover:scale-105">
-                <div class="leading-none flex flex-col justify-center">
-                    <span class="font-bold text-lg tracking-tight text-white leading-tight">SparxieBookie</span>
-                    <span class="text-[11px] text-rose-300/50 block font-mono-code mt-0.5">LEGAL PORTAL</span>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 w-full h-full flex justify-between items-center gap-3">
+            <a href="#" class="flex items-center gap-2.5 sm:gap-3.5 h-full py-2 group min-w-0">
+                <img src="assets/logo.png" alt="SparxieBookie Logo" class="h-full aspect-square object-contain transition-transform group-hover:scale-105 shrink-0">
+                <div class="leading-none flex flex-col justify-center min-w-0">
+                    <span class="font-bold text-base sm:text-lg tracking-tight text-white leading-tight truncate">SparxieBookie</span>
+                    <span class="text-[10px] sm:text-[11px] text-rose-300/50 block font-mono-code mt-0.5 whitespace-nowrap">LEGAL PORTAL</span>
                 </div>
             </a>
 
-            <div class="flex items-center gap-6 text-sm font-medium">
-                <a href="#terms" class="text-slate-300 hover:text-rose-400 transition-colors">Terms of Service</a>
-                <a href="#privacy" class="text-slate-300 hover:text-rose-400 transition-colors">Privacy Policy</a>
-                <a href="https://github.com/CavoidCorp" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-rose-950/40 border border-rose-900/50 text-xs text-rose-200 hover:border-rose-700 transition-all font-mono-code">
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium shrink-0">
+                <a href="#terms" class="text-slate-300 hover:text-rose-400 transition-colors whitespace-nowrap">Terms of Service</a>
+                <a href="#privacy" class="text-slate-300 hover:text-rose-400 transition-colors whitespace-nowrap">Privacy Policy</a>
+                <a href="https://github.com/CavoidCorp" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-rose-950/40 border border-rose-900/50 text-xs text-rose-200 hover:border-rose-700 transition-all font-mono-code whitespace-nowrap">
                     GitHub ↗
                 </a>
+            </div>
+
+            <!-- Mobile Quick Pills -->
+            <div class="flex md:hidden items-center gap-1.5 shrink-0 text-xs font-mono-code font-medium">
+                <a href="#terms" class="px-2.5 py-1.5 rounded-md bg-rose-950/50 border border-rose-900/60 text-slate-300 hover:text-rose-300 transition-colors whitespace-nowrap">Terms</a>
+                <a href="#privacy" class="px-2.5 py-1.5 rounded-md bg-rose-950/50 border border-rose-900/60 text-slate-300 hover:text-rose-300 transition-colors whitespace-nowrap">Privacy</a>
             </div>
         </div>
     </nav>
