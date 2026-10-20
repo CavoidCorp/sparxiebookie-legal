@@ -1,23 +1,16 @@
-# SparkleBook Legal Documentation
+# SparxieBookie Legal Portal 🐰✨
 
-**By 52Hz (Studio)**
+Official Legal Documentation, Terms of Service, and Privacy Policy for **SparxieBookie** (Planarcadia Stream O.S. & Discord entertainment bot), maintained by **CavoidCorp**.
 
-This repository hosts the official Terms of Service and Privacy Policy for the SparkleBook Discord bot and Web Dashboard.
+## Live Site
+Hosted via GitHub Pages at:
+👉 **[https://cavoidcorp.github.io/sparxiebookie-legal/](https://cavoidcorp.github.io/sparxiebookie-legal/)**
 
-## 🔗 Live Link
+## Brand & Assets Included
+- `customcursor.png` — Sparxie custom card/magic wand mouse cursor
+- `legalwallpaper.jpg` — Thematic Planarcadia ambient backdrop
+- `avatar.png` / `favicon.png` — Official SparxieBookie icon & favicon
+- `index.html` — Glassmorphism, Tailwind CSS, responsive mobile-first legal portal
 
-The documentation can be viewed here: https://sparklebook.github.io/sparklebook-legal/
-
-## 📜 Contents
-
-Terms of Service: Outlines the rules for using the bot and the Web Dashboard, including the strict prohibition of real-money gambling and user liability.
-
-Privacy Policy: Details what data is collected (User IDs, Server IDs) and how it is used to maintain game balances.
-
-## ⚖️ Disclaimer
-
-SparkleBook is a fan-made project by 52Hz (Studio). It is not affiliated with, endorsed by, or representative of HoYoverse (miHoYo). All Honkai: Star Rail assets and characters belong to their respective owners.
-
-## 🛠 Support
-
-If you have questions regarding these documents or wish to request data deletion, please contact 52Hz (Studio) through: sparkle42225@gmail.com
+## License & Ownership
+Unofficial fan-made entertainment project. Not affiliated with or endorsed by HoYoverse / COGNOSPHERE PTE. LTD.
