@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Portal & Terms of Stream — SparxieBookie</title>
+    <title>Legal Documentation & Terms — SparxieBookie</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/logo.png">
-    <meta name="theme-color" content="#f43f5e">
-    <meta name="description" content="Official Terms of Service and Privacy Policy for SparxieBookie — Planarcadia's #1 dopamine entertainment platform.">
+    <meta name="theme-color" content="#e11d48">
+    <meta name="description" content="Official Terms of Service and Privacy Policy for SparxieBookie.">
     
-    <!-- Open Graph / Discord Embed Preview -->
-    <meta property="og:title" content="SparxieBookie — Legal Portal & Stream Agreement">
-    <meta property="og:description" content="Welcome to the stream, Sparxheads! View our official Terms of Service and Privacy Policy. Zero real money, 100% pure dopamine.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="SparxieBookie — Terms of Service & Privacy Policy">
+    <meta property="og:description" content="Official Terms of Service and Privacy Policy documentation for SparxieBookie.">
     <meta property="og:image" content="assets/logo.png">
     <meta property="og:type" content="website">
 
@@ -21,15 +21,15 @@
             theme: {
                 extend: {
                     colors: {
-                        sparx: {
-                            pink: '#ff2d75',
-                            rose: '#f43f5e',
-                            hot: '#fb7185',
-                            cream: '#fff1f2',
-                            gold: '#fbbf24',
-                            dark: '#11050a',
-                            card: '#1e0813',
-                            border: '#f43f5e33'
+                        brand: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            900: '#881337',
+                            950: '#15060b'
                         }
                     }
                 }
@@ -38,26 +38,25 @@
     </script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
         
         * {
             box-sizing: border-box;
-            cursor: url('assets/cursor.png') 4 4, auto !important;
+            cursor: url('assets/cursor.png') 0 0, default !important;
         }
 
         a, button, input, summary, [role="button"] {
-            cursor: url('assets/cursor.png') 4 4, pointer !important;
+            cursor: url('assets/cursor.png') 0 0, pointer !important;
         }
         
         body { 
-            font-family: 'Outfit', sans-serif; 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
             overflow-x: hidden; 
-            background-color: #0d0307;
-            position: relative;
-            color: #ffe4e6;
+            background-color: #0c0407;
+            color: #f1f5f9;
         }
         
-        /* Wallpaper Backdrop with Sparxie Overlay */
+        /* High-Definition Fixed Backdrop */
         .bg-backdrop {
             position: fixed;
             top: 0;
@@ -68,327 +67,191 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            opacity: 0.18;
+            opacity: 0.14;
             pointer-events: none;
             z-index: 0;
-            filter: saturate(1.2);
         }
 
-        .ambient-mesh {
+        .ambient-gradient {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
-                radial-gradient(circle at 15% 20%, rgba(255, 45, 117, 0.15) 0%, transparent 45%),
-                radial-gradient(circle at 85% 60%, rgba(244, 63, 94, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 50% 90%, rgba(251, 191, 36, 0.08) 0%, transparent 50%);
+            background: radial-gradient(circle at 50% 0%, rgba(225, 29, 72, 0.08) 0%, transparent 60%);
             pointer-events: none;
             z-index: 1;
-            animation: pulseGlow 6s ease-in-out infinite alternate;
-        }
-        
-        @keyframes pulseGlow {
-            0% { opacity: 0.8; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.03); }
         }
 
-        @keyframes floatSlow {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-8px) rotate(3deg); }
+        /* Clean Modern Container */
+        .doc-card {
+            background-color: rgba(18, 7, 12, 0.82);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(244, 63, 94, 0.16);
         }
 
-        @keyframes sparkleTwinkle {
-            0%, 100% { opacity: 0.2; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1.15); }
-        }
-
-        .float-card {
-            animation: floatSlow 4s ease-in-out infinite;
-        }
-
-        .twinkle-star {
-            animation: sparkleTwinkle 2.5s ease-in-out infinite;
-        }
-
-        /* Glassmorphism Section */
-        .glass-panel {
-            background: linear-gradient(145deg, rgba(30, 8, 19, 0.78), rgba(18, 4, 11, 0.85));
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 45, 117, 0.22);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-            position: relative;
-        }
-
-        .glass-panel::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #ff2d75, #fb7185, #fbbf24, transparent);
-            opacity: 0.85;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 9px; }
-        ::-webkit-scrollbar-track { background: #0d0307; }
+        /* Clean Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0c0407; }
         ::-webkit-scrollbar-thumb { 
-            background: linear-gradient(180deg, #ff2d75, #f43f5e);
-            border-radius: 9999px;
-            border: 2px solid #0d0307;
+            background: #e11d48;
+            border-radius: 4px;
         }
-        ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #e11d48, #ff2d75); }
+        ::-webkit-scrollbar-thumb:hover { background: #f43f5e; }
 
-        .legal-content h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            letter-spacing: -0.02em;
-        }
-
-        .gradient-text-sparxie {
-            background: linear-gradient(135deg, #ffffff 0%, #ffe4e6 30%, #ff2d75 75%, #fbbf24 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .badge-pill {
-            background: rgba(255, 45, 117, 0.12);
-            border: 1px solid rgba(255, 45, 117, 0.35);
+        .font-mono-code {
+            font-family: 'JetBrains Mono', monospace;
         }
     </style>
 </head>
-<body class="antialiased selection:bg-pink-500 selection:text-white">
+<body class="antialiased selection:bg-rose-600 selection:text-white">
 
-    <!-- Background Wallpaper & Ambient Glow -->
     <div class="bg-backdrop"></div>
-    <div class="ambient-mesh"></div>
+    <div class="ambient-gradient"></div>
 
-    <!-- Navigation Header -->
-    <nav class="sticky top-0 z-50 backdrop-blur-xl bg-[#11050a]/90 border-b border-pink-500/20 transition-all duration-300 shadow-xl">
-        <div class="max-w-5xl mx-auto px-6 py-3.5 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-3.5 group">
-                <div class="relative">
-                    <img src="assets/logo.png" alt="SparxieBookie Icon" class="w-10 h-10 rounded-2xl shadow-lg object-cover ring-2 ring-pink-500/50 group-hover:ring-pink-400 group-hover:scale-105 transition-all duration-300">
-                    <span class="absolute -top-1 -right-1 text-xs">✨</span>
-                </div>
-                <div>
-                    <span class="font-black text-xl tracking-tight block leading-tight">
-                        <span class="gradient-text-sparxie">Sparxie</span><span class="text-pink-400">Bookie</span>
-                    </span>
-                    <span class="text-[10px] uppercase font-bold tracking-widest text-pink-300/60 block">Planarcadia Stream O.S.</span>
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#0c0407]/90 border-b border-rose-950/80">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="assets/logo.png" alt="SparxieBookie Logo" class="w-8 h-8 rounded-lg object-cover ring-1 ring-rose-500/30 group-hover:ring-rose-500/60 transition-all">
+                <div class="leading-none">
+                    <span class="font-bold text-base tracking-tight text-white">SparxieBookie</span>
+                    <span class="text-[11px] text-rose-300/50 block font-mono-code mt-0.5">LEGAL PORTAL</span>
                 </div>
             </a>
 
-            <!-- Quick Jump Navigation -->
-            <div class="flex items-center gap-6 text-sm font-semibold">
-                <a href="#tos" class="text-rose-100 hover:text-pink-400 transition-colors duration-200 flex items-center gap-1.5">
-                    <span class="text-pink-400 text-xs">♠️</span> Terms of Stream
-                </a>
-                <a href="#privacy" class="text-rose-100 hover:text-pink-400 transition-colors duration-200 flex items-center gap-1.5">
-                    <span class="text-amber-400 text-xs">♥️</span> Privacy Policy
-                </a>
-                <a href="https://github.com/CavoidCorp" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full badge-pill text-xs font-bold text-pink-200 hover:border-pink-400 transition-all duration-200">
-                    <span>CavoidCorp</span> ↗
+            <div class="flex items-center gap-6 text-sm font-medium">
+                <a href="#terms" class="text-slate-300 hover:text-rose-400 transition-colors">Terms of Service</a>
+                <a href="#privacy" class="text-slate-300 hover:text-rose-400 transition-colors">Privacy Policy</a>
+                <a href="https://github.com/CavoidCorp" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-rose-950/40 border border-rose-900/50 text-xs text-rose-200 hover:border-rose-700 transition-all font-mono-code">
+                    GitHub ↗
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Banner -->
-    <header class="py-20 md:py-28 relative z-10 overflow-hidden text-center">
+    <!-- Header -->
+    <header class="pt-16 pb-12 relative z-10 border-b border-rose-950/60">
         <div class="max-w-4xl mx-auto px-6">
-            
-            <!-- Floating Streamer Badge -->
-            <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full badge-pill mb-6 backdrop-blur-md shadow-lg shadow-pink-950/40">
-                <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-ping"></span>
-                <span class="text-pink-200 text-xs font-extrabold tracking-widest uppercase">
-                    🐰 @Sparxicle ♥ LOLOLOL — Live Broadcast
-                </span>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded border border-rose-900/60 bg-rose-950/30 text-rose-300 text-xs font-mono-code mb-4">
+                <span>DOCUMENTATION</span>
+                <span>•</span>
+                <span>REVISION 2026.10</span>
             </div>
-
-            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight drop-shadow-2xl leading-none">
-                <span class="gradient-text-sparxie block mb-2">Legal Portal</span>
-                <span class="text-white text-3xl md:text-4xl font-extrabold tracking-normal text-rose-200/90">& Stream Subscriber Agreement</span>
+            <h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
+                Terms of Service & Privacy Policy
             </h1>
-
-            <p class="text-rose-100/80 text-base md:text-xl max-w-2xl mx-auto font-normal leading-relaxed mb-8">
-                *"Welcome to the stream, Sparxheads! Are you ready for a day overflowing with dopamine? The world is full of sparkle, but even the best parties have chat rules!"*
+            <p class="text-slate-400 text-base max-w-2xl leading-relaxed">
+                Official operating guidelines, user data protection policies, and virtual entertainment disclaimers for SparxieBookie.
             </p>
-
-            <!-- Card Suits Floating Indicators -->
-            <div class="flex justify-center items-center gap-4 text-xs font-mono tracking-widest text-pink-300/70">
-                <span class="text-pink-500">♠️</span>
-                <span>VIRTUAL SIMULATION ONLY</span>
-                <span class="text-amber-400">♦️</span>
-                <span>ZERO REAL VALUE</span>
-                <span class="text-rose-400">♥️</span>
-                <span>100% PURE DOPAMINE</span>
-                <span class="text-pink-500">♣️</span>
-            </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="max-w-4xl mx-auto px-6 pb-24 relative z-10 space-y-12 legal-content">
+    <!-- Content Sections -->
+    <main class="max-w-4xl mx-auto px-6 py-12 relative z-10 space-y-10">
 
         <!-- 1. TERMS OF SERVICE -->
-        <section id="tos" class="glass-panel p-8 md:p-12 rounded-3xl">
-            <div class="flex items-center gap-3.5 mb-8 pb-4 border-b border-pink-500/20">
-                <span class="text-3xl">🐰</span>
-                <div>
-                    <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight">Terms of Service & Stream Contract</h2>
-                    <p class="text-xs text-pink-300/60 uppercase tracking-widest font-bold">Rulebook for Planarcadia & SparxieBookie</p>
-                </div>
+        <section id="terms" class="doc-card p-8 md:p-10 rounded-xl">
+            <div class="border-b border-rose-900/40 pb-4 mb-6">
+                <h2 class="text-xl font-bold text-white tracking-tight">Terms of Service</h2>
+                <p class="text-xs text-rose-400/70 font-mono-code mt-1">LAST MODIFIED: OCTOBER 2026</p>
             </div>
 
-            <div class="space-y-8 text-rose-100/85 text-sm md:text-base leading-relaxed">
+            <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
                 <div>
-                    <h3 class="text-lg font-bold text-pink-300 mb-2.5 flex items-center gap-2">
-                        <span>♠️</span> 1. Acceptance of Stream Terms
-                    </h3>
+                    <h3 class="text-base font-semibold text-rose-200 mb-2">1. Acceptance of Terms</h3>
                     <p>
-                        By inviting <strong>SparxieBookie</strong> (the "Bot") to your Discord guild, accessing any related web interface, or using its interactive commands, you automatically tune into our broadcast and agree to be bound by these Terms of Service. If you don't vibe with these conditions, you must immediately dismiss the stream and cease using the Bot.
+                        By adding SparxieBookie (the "Bot") to a Discord server or interacting with its features, you agree to be bound by these Terms of Service. If you do not agree with any portion of these terms, you must immediately discontinue use of the Bot.
                     </p>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-bold text-pink-300 mb-2.5 flex items-center gap-2">
-                        <span>♦️</span> 2. Nature of Service: Virtual Clout Only
-                    </h3>
+                    <h3 class="text-base font-semibold text-rose-200 mb-2">2. Nature of Service & Simulated Economy</h3>
                     <p>
-                        SparxieBookie is an interactive simulated entertainment and dopamine-fueled mini-game bot operating under the Path of Elation. It is provided strictly <em>"as is"</em> for fun, roleplay, and community entertainment.
+                        SparxieBookie is a simulated casino and arcade entertainment application provided strictly for recreation, roleplay, and community engagement. 
                     </p>
-                    <div class="mt-3 p-4 rounded-2xl bg-rose-950/40 border border-pink-500/30 text-rose-200 text-sm">
-                        ⚠️ <strong>Zero Real-World Value Notice:</strong> All virtual currencies (Tokens, Credits, Chips), bank account balances, vault funds, wagers, and items hold <strong>strictly zero real-world financial value</strong>. They cannot be converted, cashed out, refunded, or traded for real currency, cryptocurrency, or goods under any circumstances.
+                    <div class="mt-3 p-3.5 rounded-lg bg-rose-950/30 border border-rose-900/60 text-xs text-rose-200/90 leading-relaxed font-mono-code">
+                        <strong>IMPORTANT DISCLAIMER:</strong> All virtual currencies (Tokens, Credits), account balances, vault deposits, and in-game assets hold ZERO real-world monetary value. They cannot be converted, redeemed, or exchanged for fiat currency, cryptocurrency, goods, or services under any circumstance.
                     </div>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-bold text-pink-300 mb-2.5 flex items-center gap-2">
-                        <span>♥️</span> 3. User Conduct & Strict Anti-Exploit Policy
-                    </h3>
+                    <h3 class="text-base font-semibold text-rose-200 mb-2">3. Prohibited Conduct & Real-Money Facilitation</h3>
                     <p>
-                        Our stream is a carnival for everyone. We have zero tolerance for buzzkills:
+                        Users are strictly prohibited from using the Bot's mechanics, data, or logs to track or facilitate real-money gambling, external betting pools, debt settlements, or financial transactions.
                     </p>
-                    <ul class="list-none space-y-2 mt-3 pl-2">
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-pink-400 font-bold">✦</span>
-                            <span><strong>No Real Money Facilitation:</strong> Using SparxieBookie data, logs, or currency to facilitate real-world betting, debts, or peer-to-peer real-money payments is strictly prohibited.</span>
-                        </li>
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-pink-400 font-bold">✦</span>
-                            <span><strong>No Exploitation:</strong> Abusing bugs, automated macro scripts, bot-raiding, or database injection vulnerabilities will result in an immediate permanent ban and asset wipe.</span>
-                        </li>
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-pink-400 font-bold">✦</span>
-                            <span><strong>Community Respect:</strong> Harassment, hate speech, or malicious interference with other users' gameplay violates our community code.</span>
-                        </li>
+                    <ul class="list-disc list-inside mt-2 space-y-1.5 text-slate-400 pl-1">
+                        <li>Exploiting bugs, script automations, or denial-of-service attempts will result in permanent blacklisting.</li>
+                        <li>The developers bear no liability for private agreements or disputes conducted between users.</li>
+                        <li>Users are solely responsible for ensuring their usage complies with Discord's Community Guidelines.</li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-bold text-pink-300 mb-2.5 flex items-center gap-2">
-                        <span>♣️</span> 4. Virtual Purchases & Cosmetic Transactions
-                    </h3>
+                    <h3 class="text-base font-semibold text-rose-200 mb-2">4. Virtual Purchases & Asset Finality</h3>
                     <p>
-                        Users may spend accumulated in-game virtual tokens on vanity bank account numbers, cosmetics, gift codes, and role flair. All such redemptions and purchases are <strong>final and non-refundable</strong>. The developers reserve the right to modify, balance, or adjust game systems and economy numbers to preserve healthy fun.
+                        Virtual currency spent on vanity bank numbers, cosmetics, gift codes, or role flair is final and non-refundable. The development team reserves the right to rebalance or modify game values to maintain fair and stable systems.
                     </p>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-bold text-pink-300 mb-2.5 flex items-center gap-2">
-                        <span>✨</span> 5. Intellectual Property & Fan Project Disclaimer
-                    </h3>
+                    <h3 class="text-base font-semibold text-rose-200 mb-2">5. Intellectual Property</h3>
                     <p>
-                        SparxieBookie is an unofficial, independent fan-made creative project developed by <strong>CavoidCorp</strong>. All characters, names, art assets, and lore inspired by or referencing <em>Honkai: Star Rail</em> (including Sparkle, Sparxie, the Masked Fools, and the IPC) are the intellectual property of <strong>HoYoverse / COGNOSPHERE PTE. LTD.</strong> We claim no official ownership or commercial affiliation with HoYoverse.
+                        SparxieBookie is an independent, non-commercial fan-made project developed by <strong>CavoidCorp</strong>. Any names, characters, or assets referencing <em>Honkai: Star Rail</em> (including Sparxie, Sparkle, or the Masked Fools) are the property of <strong>HoYoverse / COGNOSPHERE PTE. LTD.</strong> This project is not affiliated with or endorsed by HoYoverse.
                     </p>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-bold text-pink-300 mb-2.5 flex items-center gap-2">
-                        <span>🛡️</span> 6. Limitation of Liability
-                    </h3>
+                    <h3 class="text-base font-semibold text-rose-200 mb-2">6. Limitation of Liability</h3>
                     <p>
-                        In no event shall CavoidCorp, developers, or server administrators be held liable for any damages resulting from Discord API outages, database network downtime, data loss, or server host interruptions. You participate in the carnival at your own discretion.
+                        Under no circumstances shall CavoidCorp or the bot maintainers be liable for indirect damages, service interruptions, Discord API downtime, or data loss. The service is provided on an "as is" and "as available" basis.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- 2. PRIVACY POLICY -->
-        <section id="privacy" class="glass-panel p-8 md:p-12 rounded-3xl">
-            <div class="flex items-center gap-3.5 mb-8 pb-4 border-b border-pink-500/20">
-                <span class="text-3xl">🔒</span>
-                <div>
-                    <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight">Privacy Policy & Data Transparency</h2>
-                    <p class="text-xs text-pink-300/60 uppercase tracking-widest font-bold">How Your Profile & Game Data Are Handled</p>
-                </div>
+        <section id="privacy" class="doc-card p-8 md:p-10 rounded-xl">
+            <div class="border-b border-rose-900/40 pb-4 mb-6">
+                <h2 class="text-xl font-bold text-white tracking-tight">Privacy Policy</h2>
+                <p class="text-xs text-rose-400/70 font-mono-code mt-1">DATA PROCESSING & RETENTION</p>
             </div>
 
-            <div class="space-y-8 text-rose-100/85 text-sm md:text-base leading-relaxed">
+            <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
                 <div>
-                    <h3 class="text-lg font-bold text-pink-300 mb-2.5 flex items-center gap-2">
-                        <span>♠️</span> 1. What Information We Store
-                    </h3>
+                    <h3 class="text-base font-semibold text-rose-200 mb-2">1. Information Stored</h3>
                     <p>
-                        We believe in full transparency. To ensure your game progress, levels, and balances remain synchronized, we store only the bare minimum required data:
+                        SparxieBookie stores only operational data necessary for core gameplay synchronization:
                     </p>
-                    <ul class="list-none space-y-2.5 mt-3 pl-2">
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-pink-400 font-bold">◆</span>
-                            <span><strong>Discord User ID & Username:</strong> To associate your virtual balance, level, XP, login streaks, and bank account with your Discord identity.</span>
-                        </li>
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-pink-400 font-bold">◆</span>
-                            <span><strong>Gameplay & Bank Statistics:</strong> Token balance, vault balance, hashed bank PIN, active wagers, loan state, and transaction timestamps.</span>
-                        </li>
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-pink-400 font-bold">◆</span>
-                            <span><strong>Command Analytics:</strong> Command name, execution timestamp, and outcome (success/failure) for bot health diagnostics and daily reporting.</span>
-                        </li>
+                    <ul class="list-disc list-inside mt-2 space-y-1.5 text-slate-400 pl-1">
+                        <li><strong>Discord User ID & Username:</strong> Linked to your profile balance, experience level, login streaks, and bank account.</li>
+                        <li><strong>Gameplay & Bank State:</strong> Liquid balance, vault balance, salted cryptographic PIN hashes, and loan metrics.</li>
+                        <li><strong>System Logs:</strong> Command names, timestamps, and execution success flags for diagnostic and health monitoring.</li>
                     </ul>
-                    <p class="mt-3 text-xs text-pink-300/70 font-mono">
-                        * Note: We NEVER read, store, or log your personal messages, private channels, or external Discord activity.
+                    <p class="mt-2 text-xs text-slate-400 font-mono-code">
+                        We do not collect, read, or store private Discord messages or voice activity.
                     </p>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-bold text-pink-300 mb-2.5 flex items-center gap-2">
-                        <span>♦️</span> 2. Database Infrastructure & Security
-                    </h3>
+                    <h3 class="text-base font-semibold text-rose-200 mb-2">2. Infrastructure & Data Security</h3>
                     <p>
-                        Your data is securely stored on enterprise cloud infrastructure hosted with <strong>Supabase (PostgreSQL)</strong>. All client access is protected by Row Level Security (RLS) policies, and sensitive fields like banking PINs are cryptographically hashed using salted <code>scrypt</code> algorithms before writing to disk.
+                        All records are stored on managed cloud infrastructure utilizing <strong>Supabase (PostgreSQL)</strong>. Data is protected by Row Level Security (RLS) policies. Sensitive values such as bank account PINs are hashed using salted <code>scrypt</code> algorithms before persistence.
                     </p>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-bold text-pink-300 mb-2.5 flex items-center gap-2">
-                        <span>♥️</span> 3. Third-Party Sharing & Commercial Data
-                    </h3>
+                    <h3 class="text-base font-semibold text-rose-200 mb-2">3. Third-Party Sharing</h3>
                     <p>
-                        We respect your privacy:
+                        User data is never sold, leased, traded, or shared with third-party advertising brokers or commercial analytics platforms. Data is utilized strictly within the scope of SparxieBookie operations.
                     </p>
-                    <ul class="list-none space-y-2 mt-2 pl-2">
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-rose-400">✖</span>
-                            <span>We <strong>NEVER</strong> sell, monetize, or rent user data to third parties or advertising brokers.</span>
-                        </li>
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-rose-400">✖</span>
-                            <span>We <strong>NEVER</strong> use user data for targeted ads or cross-platform tracking.</span>
-                        </li>
-                    </ul>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-bold text-pink-300 mb-2.5 flex items-center gap-2">
-                        <span>♣️</span> 4. Data Deletion & The Right to Be Forgotten
-                    </h3>
+                    <h3 class="text-base font-semibold text-rose-200 mb-2">4. Data Deletion</h3>
                     <p>
-                        You retain full control over your stored data. If you ever want your account, balances, logs, and stats completely expunged from the database, you can submit a deletion request to the bot administrators or via our GitHub repository. Account wipe is permanent and irreversible.
+                        Users may request permanent deletion of their account records, balances, and history at any time by contacting the bot developers via the official GitHub repository or support channels.
                     </p>
                 </div>
             </div>
@@ -397,22 +260,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#0b0205] border-t border-pink-500/20 py-16 relative z-10 text-center">
-        <div class="max-w-4xl mx-auto px-6 space-y-4">
-            <div class="flex items-center justify-center gap-3">
-                <img src="assets/logo.png" alt="SparxieBookie Icon" class="w-8 h-8 rounded-xl object-cover ring-1 ring-pink-500/40">
-                <span class="font-extrabold text-white text-lg tracking-tight">SparxieBookie</span>
-            </div>
-            
-            <p class="text-xs text-rose-200/60 max-w-lg mx-auto">
-                &copy; <span id="year"></span> <a href="https://github.com/CavoidCorp" class="text-pink-400 font-bold hover:underline">CavoidCorp</a>. Unofficial fan project. Not affiliated with or endorsed by HoYoverse.
+    <footer class="border-t border-rose-950 py-10 relative z-10 text-center">
+        <div class="max-w-4xl mx-auto px-6 space-y-2 text-xs text-slate-500">
+            <p>
+                &copy; <span id="year"></span> <a href="https://github.com/CavoidCorp" class="text-rose-400 hover:underline">CavoidCorp</a>. Unofficial fan project. Not affiliated with HoYoverse.
             </p>
-
-            <div class="flex justify-center items-center gap-2 text-xs text-pink-300/40 font-mono tracking-widest pt-2">
-                <span>✦</span>
-                <span>PARTY TILL THE WORLD ENDS</span>
-                <span>✦</span>
-            </div>
+            <p class="font-mono-code text-[11px] text-slate-600">
+                HOSTED VIA GITHUB PAGES
+            </p>
         </div>
     </footer>
 
